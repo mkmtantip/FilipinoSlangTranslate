@@ -1,4 +1,7 @@
 import pandas as pd
 
-df = pd.read_csv('testdata.csv')
-print(df)
+xls = pd.ExcelFile('Test.xlsx') #dataset goes here
+test = xls.parse(xls.sheet_names[0]) 
+print(test.to_dict())
+
+
