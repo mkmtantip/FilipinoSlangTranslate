@@ -1,9 +1,10 @@
 {
-    "name": "FilipinoSlang Translate",
+    "name": "FilipinoSlangTranslate",
     "version": "1.0",
     "manifest_version": 2,
     "description": "Extension to Translate Filipino Slangs on Twitter",
     "browser_action": {
+        "default_icon": "./Images/logo.png",
         "default_popup": "extension.html"
     }
 }
