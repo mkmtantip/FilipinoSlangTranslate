@@ -1,0 +1,16 @@
+
+
+Flow 
+Click the button  
+Instant screenshot + ocr
+take all the text 
+tokenize everything into words 
+autocorrect and compare to dictionary with formatted words dictionary terms wise should all be lowercase   
+output the corrected on extension 
+and then delete the png 
+
+
+OCR Implementation = tesseract.js 
+
+
+fnm env --use-on-cd | Out-String | Invoke-Expression

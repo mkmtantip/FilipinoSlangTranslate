@@ -8,9 +8,17 @@
     },
     "action": {
       "default_popup": "extension.html"
- 
+      },
+    "permissions":[
+      "tabs",
+      "activeTab",
+      "downloads"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://x.com/*"],
+        "js": ["function.js"]
       }
-    
-     
-  }
+    ]
+}
   
