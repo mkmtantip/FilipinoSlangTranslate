@@ -16,7 +16,6 @@
     ],
     "content_scripts": [
       {
-        "matches": ["*://x.com/*"],
         "js": ["function.js"]
       }
     ]
