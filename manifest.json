@@ -14,10 +14,13 @@
       "activeTab",
       "downloads"
     ],
+    "background":{
+      "service_worker": "background.js"
+    },
     "content_scripts": [
       {
         "matches": ["*://x.com/*"],
-        "js": ["function.js"]
+        "js": ["main.js"]
       }
     ]
 }

@@ -2,15 +2,23 @@
 
 Flow 
 Click the button  
-Instant screenshot + ocr
+Instant screenshot to a directory + ocr
+
 take all the text 
 tokenize everything into words 
 autocorrect and compare to dictionary with formatted words dictionary terms wise should all be lowercase   
 output the corrected on extension 
-and then delete the png 
+
+cleaning: 
+delete png  
+
 
 
 OCR Implementation = tesseract.js 
 
 
 fnm env --use-on-cd | Out-String | Invoke-Expression
+
+Flow 
+Python
+Opencv tesseract get all text from video recording -> tokenize -> lowercase -> autocorrect -> compare to dictionary terms -> output corrected 
