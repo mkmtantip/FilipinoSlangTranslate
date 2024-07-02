@@ -1,6 +1,7 @@
 from PIL import ImageGrab
 import keyboard
 import pytesseract
+import re
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 import cv2
 from pandas import *
@@ -17,14 +18,20 @@ def imageText():
     tokenizer()
         
 def tokenizer():
-    global x 
-    x = output.split()
-    print(x)
+    global processed
+    unprocessed = re.split(r"[^a-zA-Z]", output) #just splits into spaces 
+    removeSpace = [ele for ele in unprocessed if ele.strip()] #removes spaces
+    processed = [x.lower() for x in removeSpace]
+    print(processed)
     compare()
 
-#not yet finisheed 
+#kailangan ng smth autocorrect 
+#compared and outputs
 def compare():
-    sum(database[key] if key in database else 0 for key in database)
+    # sum(database[key] if key in database else 0 for key in database)
+    for key, value in database.items():
+        if key in processed:
+            print(key, value)
 
 while True:
     try:
