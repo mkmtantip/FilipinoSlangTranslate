@@ -18,3 +18,5 @@ fnm env --use-on-cd | Out-String | Invoke-Expression
 
 https://github.com/filyp/autocorrect
 https://github.com/barrust/pyspellchecker/blob/master/scripts/build_dictionary.py
+
+Set-ExecutionPolicy -scope Process Unrestricted
