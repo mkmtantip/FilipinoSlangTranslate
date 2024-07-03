@@ -17,17 +17,16 @@ database = df.set_index(df.columns[0]).to_dict()[df.columns[1]]
 xls2 = ExcelFile('Pronounciation.xlsx')
 df2 = xls2.parse(xls2.sheet_names[0])
 database2 = df2.set_index(df2.columns[0]).to_dict()[df2.columns[1]]
-
-            
-def imageText():
+2
+#Start OCR: Image to String       
+def imageText(extractedString):
     img = cv2.imread('screenshot.png')
-    global output
-    output = pytesseract.image_to_string(img)
-    tokenizer()
+    extractedString = pytesseract.image_to_string(img)
+    return extractedString
 
-def tokenizer():
-    global processed
-    unprocessed = re.split(r"[^a-zA-Z]", output) #just splits into spaces 
+#Process String to List 
+def tokenizer(processedList):
+    unprocessed = re.split(r"[^a-zA-Z]", processedList) #just splits into spaces 
     removeSwords = [w for w in unprocessed if not w.lower() in stop_words] #removes stop words
     # removes stop words remove words less than 3 letters remove words without vowels remove words with digits remove special 
     # unprocessed = re.split(r'\b(\w*[\d]+\w*)|\W+|\d|\b\w{1,2}\b|\w*\d\w*|[^aeiou]+$', output) #just splits into spaces 
@@ -36,22 +35,34 @@ def tokenizer():
     removeSpace = [ele for ele in removeSwords if ele.strip()] #removes spaces
     processed = [x.lower() for x in removeSpace]
     print(processed)
-    compare()
+    return processed
 
-#try implement autocorrect
-def compare():
+#Compare to Dictionary 
+def compare(processed):
     for key, value in database.items():
         if key in processed:
             print("Term:", key,"Definition:", database[key],"Pronounciation: ", database2[key])
 #Testing
-imageText()
-# while True:
-#     try:
-#         if keyboard.is_pressed('q'):
-#             screenshot = ImageGrab.grab()
-#             screenshot.save("screenshot.png")
-#             screenshot.close()
-#             imageText()
+# def function(): 
+#     while True: 
+#         try:
+#             if keyboard.is_pressed('ctrl+q'):
+#                 screenshot = ImageGrab.grab()
+#                 screenshot.save("screenshot.png")
+#             elif keyboard.is_pressed('ctrl+p'):
+#                 break
+#         except:
 #             break
-#     except:
-#         break
+
+
+while True:
+    try:
+        if keyboard.is_pressed('1'):
+            screenshot = ImageGrab.grab() #dito kayo maglagay ng snipping function sa ImageGrab.grab() kapag may nahanap kayo 
+            screenshot.save("screenshot.png")
+            compare(tokenizer(imageText(screenshot)))
+        elif keyboard.is_pressed('2'):
+            screenshot.close()
+            break
+    except:
+        break

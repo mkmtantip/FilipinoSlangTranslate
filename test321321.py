@@ -31,6 +31,6 @@ def tokenizer(text):
 
 # Example usage
 original_text = "Hello, World! It's a beautiful day. A quick brown fox jumps over the lazy dog. Nh Nh3213 Slayx22 nhkjkkkk fb ffs Slayyyyyy"
-processed = tokenizer(original_text)
-print(processed)
+test = tokenizer(original_text)
+print(test)
 
