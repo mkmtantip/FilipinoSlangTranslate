@@ -7,7 +7,7 @@ from pandas import *
 from Levenshtein import distance
 from nltk.corpus import stopwords
 import nltk
-
+# HEELO MR KIM
 # Download the stopwords from NLTK
 nltk.download('stopwords')
 nltk.download('words')
