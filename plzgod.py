@@ -2,11 +2,11 @@ from PIL import ImageGrab
 import keyboard
 import pytesseract
 import re
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Joshua\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 import cv2
 from pandas import *
 from Levenshtein import distance
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 
 stop_words = set(stopwords.words('english'))
 #Excel database to dict 

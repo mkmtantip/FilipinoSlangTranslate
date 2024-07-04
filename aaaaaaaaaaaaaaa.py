@@ -9,10 +9,10 @@ from nltk.corpus import stopwords
 import nltk
 
 # Download the stopwords from NLTK
-nltk.download('stopwords')
-nltk.download('words')
+# nltk.download('stopwords')
+# nltk.download('words')
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\Joshua\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 
 # Excel database to dict
 xls = ExcelFile('Test.xlsx')
