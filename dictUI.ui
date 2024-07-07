@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>351</width>
+      <height>601</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QPushButton" name="capture_button">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>470</y>
+        <width>151</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #EDF3E9;
+border-radius: 15px;
+padding: 4px;</string>
+      </property>
+      <property name="text">
+       <string>START DETECTION</string>
+      </property>
+      <property name="autoRepeatDelay">
+       <number>296</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="logo_label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>350</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../Downloads/Page 1.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="explore_button">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>520</y>
+        <width>151</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #EDF3E9;
+border-radius: 15px;
+padding: 4px;</string>
+      </property>
+      <property name="text">
+       <string>VIEW DICTIONARY</string>
+      </property>
+     </widget>
+     <zorder>logo_label</zorder>
+     <zorder>capture_button</zorder>
+     <zorder>explore_button</zorder>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>311</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #ffffff; width=0px;height:0px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>311</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="results_label">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <italic>false</italic>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #ffffff</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="back_button">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>545</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #5EA563;
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: white;
+padding: 4px;
+color: white</string>
+      </property>
+      <property name="text">
+       <string>BACK</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>350</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../Downloads/Page2.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label_2</zorder>
+     <zorder>scrollArea</zorder>
+     <zorder>back_button</zorder>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QPushButton" name="search_button">
+      <property name="geometry">
+       <rect>
+        <x>276</x>
+        <y>97</y>
+        <width>31</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../../Downloads/search logo.png</normaloff>../../../../Downloads/search logo.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="shortcut">
+       <string>Return</string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="search_text">
+      <property name="geometry">
+       <rect>
+        <x>32</x>
+        <y>97</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 0;color: #5EA563;font-weight: bold;</string>
+      </property>
+     </widget>
+     <widget class="QScrollArea" name="scrollArea_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>311</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #ffffff; width=0px;height:0px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_5">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>311</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #ffffff</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="all_contents">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <italic>false</italic>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #ffffff</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="sort_button">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>155</y>
+        <width>105</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #5EA563;
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: white;
+padding: 4px;
+color: white</string>
+      </property>
+      <property name="text">
+       <string>SORT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_button2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>545</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #5EA563;
+border-style: outset;
+border-width: 1px;
+border-radius: 15px;
+border-color: white;
+padding: 4px;
+color: white</string>
+      </property>
+      <property name="text">
+       <string>BACK</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>350</width>
+        <height>600</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../Downloads/Page3.png</pixmap>
+      </property>
+     </widget>
+     <zorder>label</zorder>
+     <zorder>scrollArea_2</zorder>
+     <zorder>search_button</zorder>
+     <zorder>search_text</zorder>
+     <zorder>sort_button</zorder>
+     <zorder>back_button2</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
