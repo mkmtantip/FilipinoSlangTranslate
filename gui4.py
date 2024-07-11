@@ -180,3 +180,5 @@ if __name__ == "__main__":
     window = DictionaryApp()
     window.show()
     sys.exit(app.exec_())
+    
+    # pushhh
